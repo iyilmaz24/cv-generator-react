@@ -1,9 +1,9 @@
 
 
-export default function CompanyDetails({ string }) {
+export default function CompanyDetails({ string, styleClasses}) {
     return (
         <>
-            <p>{string}</p>
+            <p class={styleClasses}>{string}</p>
         </>
     )
 }

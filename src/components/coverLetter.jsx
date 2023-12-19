@@ -1,9 +1,9 @@
 
 
-export default function CoverLetter({ string }) {
+export default function CoverLetter({ string, styleClasses}) {
     return (
         <>
-            <p>{string}</p>
+            <p class={styleClasses}>{string}</p>
         </>
     )
 }

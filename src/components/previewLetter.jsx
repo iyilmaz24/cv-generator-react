@@ -1,9 +1,9 @@
 
 
-export default function PreviewLetter({ string }) {
+export default function PreviewLetter({ string, styleClasses }) {
     return (
         <>
-            <p>{string}</p>
+            <p class={styleClasses}>{string}</p>
         </>
     )
 }
