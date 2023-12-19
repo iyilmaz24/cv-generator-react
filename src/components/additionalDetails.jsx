@@ -1,9 +1,11 @@
 
 
-export default function AdditionalDetails({ string, styleClasses}) {
+export default function AdditionalDetails({ styleClasses }) {
     return (
-        <>
-            <p class={styleClasses}>{string}</p>
+        <>  
+            <div class={styleClasses}>
+                <div>Optional Details</div>
+            </div>
         </>
     )
 }

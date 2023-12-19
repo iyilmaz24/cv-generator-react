@@ -1,9 +1,11 @@
 
 
-export default function PersonalDetails({ string, styleClasses }) {
+export default function PersonalDetails({  styleClasses }) {
     return (
         <>
-            <p class={styleClasses}>{string}</p>
+            <div class={styleClasses}>
+                <div>Personal Details</div>
+            </div>
         </>
     )
 }

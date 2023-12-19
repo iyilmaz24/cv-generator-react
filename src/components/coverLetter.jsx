@@ -1,9 +1,11 @@
 
 
-export default function CoverLetter({ string, styleClasses}) {
+export default function CoverLetter({ styleClasses }) {
     return (
         <>
-            <p class={styleClasses}>{string}</p>
+            <div class={styleClasses}>
+                <div>Letter Body</div>
+            </div>
         </>
     )
 }

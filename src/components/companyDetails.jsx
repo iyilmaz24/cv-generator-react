@@ -1,9 +1,11 @@
 
 
-export default function CompanyDetails({ string, styleClasses}) {
+export default function CompanyDetails({ styleClasses }) {
     return (
         <>
-            <p class={styleClasses}>{string}</p>
+            <div class={styleClasses}>
+                <div>Employer Details</div>
+            </div>
         </>
     )
 }
