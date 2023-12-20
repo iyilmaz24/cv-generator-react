@@ -9,7 +9,7 @@ import ExpandButton from './components/expandButton'
 
 function App() {
 
-  const [debugString, setDebugString] = useState('hello world!');
+  const [openForm, setOpenForm] = useState(1);
 
   const rightPreviewStyles = "component-preview component-base";
   const leftInputStyles = "component-form component-base";
@@ -19,13 +19,25 @@ function App() {
     <div id='parent-wrapper'>
 
       <div id='left-form'>
-        <PersonalDetails styleClasses={leftInputStyles} children={<ExpandButton />} />
+        <PersonalDetails styleClasses={leftInputStyles} children={<ExpandButton shown={openForm === 1} 
+        click={() => {if(openForm !== 1){setOpenForm(1)}
+            else{setOpenForm(0)} }} />} 
+        shown={openForm === 1} />
 
-        <AdditionalDetails styleClasses={leftInputStyles} children={<ExpandButton />} />
+        <AdditionalDetails styleClasses={leftInputStyles} children={<ExpandButton shown={openForm === 2} 
+        click={() => {if(openForm !== 2){setOpenForm(2)}
+            else{setOpenForm(0)} }} />} 
+        shown={openForm === 2} />
 
-        <CompanyDetails styleClasses={leftInputStyles} children={<ExpandButton />} />
+        <CompanyDetails styleClasses={leftInputStyles} children={<ExpandButton shown={openForm === 3} 
+        click={() => {if(openForm !== 3){setOpenForm(3)}
+            else{setOpenForm(0)} }} />} 
+        shown={openForm === 3} />
 
-        <CoverLetter styleClasses={leftInputStyles} children={<ExpandButton />} />
+        <CoverLetter styleClasses={leftInputStyles} children={<ExpandButton shown={openForm === 4} 
+        click={() => {if(openForm !== 4){setOpenForm(4)}
+            else{setOpenForm(0)} }} />} 
+        shown={openForm === 4} />
       </div>
 
       <div id='right-preview'>
