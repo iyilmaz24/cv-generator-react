@@ -1,10 +1,13 @@
 
 
-export default function AdditionalDetails({ styleClasses }) {
+export default function AdditionalDetails({  styleClasses, children }) {
     return (
         <>  
-            <div class={styleClasses}>
-                <div>Optional Details</div>
+            <div className={styleClasses}>
+                <div className="form-title">
+                    Optional Details
+                    { children }
+                </div>
             </div>
         </>
     )

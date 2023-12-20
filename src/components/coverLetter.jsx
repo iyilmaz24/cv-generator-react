@@ -1,10 +1,13 @@
 
 
-export default function CoverLetter({ styleClasses }) {
+export default function CoverLetter({  styleClasses, children }) {
     return (
         <>
-            <div class={styleClasses}>
-                <div>Letter Body</div>
+            <div className={styleClasses}>
+                <div className="form-title">
+                    Letter Body
+                    { children }
+                </div>
             </div>
         </>
     )

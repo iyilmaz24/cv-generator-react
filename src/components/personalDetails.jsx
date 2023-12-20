@@ -1,10 +1,14 @@
 
 
-export default function PersonalDetails({  styleClasses }) {
+export default function PersonalDetails({  styleClasses, children }) {
     return (
         <>
-            <div class={styleClasses}>
-                <div>Personal Details</div>
+            <div className={styleClasses}>
+                <div className="form-title">
+                    Personal Details
+                    { children }
+                </div>
+
             </div>
         </>
     )

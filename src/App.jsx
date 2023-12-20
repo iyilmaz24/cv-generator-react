@@ -5,6 +5,7 @@ import AdditionalDetails from './components/additionalDetails'
 import CompanyDetails from './components/companyDetails'
 import CoverLetter from './components/coverLetter'
 import PreviewLetter from './components/previewLetter'
+import ExpandButton from './components/expandButton'
 
 function App() {
 
@@ -18,13 +19,13 @@ function App() {
     <div id='parent-wrapper'>
 
       <div id='left-form'>
-        <PersonalDetails styleClasses={leftInputStyles} />
+        <PersonalDetails styleClasses={leftInputStyles} children={<ExpandButton />} />
 
-        <AdditionalDetails styleClasses={leftInputStyles} />
+        <AdditionalDetails styleClasses={leftInputStyles} children={<ExpandButton />} />
 
-        <CompanyDetails styleClasses={leftInputStyles} />
+        <CompanyDetails styleClasses={leftInputStyles} children={<ExpandButton />} />
 
-        <CoverLetter styleClasses={leftInputStyles} />
+        <CoverLetter styleClasses={leftInputStyles} children={<ExpandButton />} />
       </div>
 
       <div id='right-preview'>

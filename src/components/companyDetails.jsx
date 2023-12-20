@@ -1,10 +1,13 @@
 
 
-export default function CompanyDetails({ styleClasses }) {
+export default function CompanyDetails({  styleClasses, children }) {
     return (
         <>
-            <div class={styleClasses}>
-                <div>Employer Details</div>
+            <div className={styleClasses}>
+                <div className="form-title">
+                    Employer Details
+                    { children }
+                </div>
             </div>
         </>
     )
