@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-    <div>
+    <div id='content-wrapper'>
 
       <div id='top-header-div'>
         <div id='logo-text'>CoverLetter.io</div>

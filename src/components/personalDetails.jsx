@@ -5,11 +5,14 @@ export default function PersonalDetails({  styleClasses, children, shown }) {
     if (shown) {
         return (
             <>
-                <div className={styleClasses}>
-                    {/* Personal Details */}
+                <div className={styleClasses + " component-form-shown"}>
                     <form>
                         <input placeholder="First Name"></input>
                         <input placeholder="Last Name"></input>
+                        <input placeholder="Phone #"></input>
+                        <input placeholder="Email"></input>
+                        <input placeholder="City, State"></input>
+                        <input placeholder="Current Title"></input>
                     </form>
                     <div className="form-title">
                         { children }
@@ -22,7 +25,7 @@ export default function PersonalDetails({  styleClasses, children, shown }) {
     else {
         return (
             <>
-                <div className={styleClasses}>
+                <div className={styleClasses + " component-form-closed"}>
                     <div className="form-title">
                         Personal Details
                         { children }

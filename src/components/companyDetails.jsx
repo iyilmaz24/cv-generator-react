@@ -5,8 +5,11 @@ export default function CompanyDetails({  styleClasses, children, shown }) {
     if(shown){
         return (
             <>
-                <div className={styleClasses}>
-                    Employer Details
+                <div className={styleClasses + " component-form-shown"}>
+                    <form>
+                        <input placeholder="Company"></input>
+                        <input placeholder="Position"></input>
+                    </form>
                     <div className="form-title">
                         { children }
                     </div>
@@ -17,7 +20,7 @@ export default function CompanyDetails({  styleClasses, children, shown }) {
     else{
         return (
             <>
-                <div className={styleClasses}>
+                <div className={styleClasses + " component-form-closed"}>
                     <div className="form-title">
                         Employer Details
                         { children }
