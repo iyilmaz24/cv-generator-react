@@ -19,7 +19,7 @@ function App() {
     <div>
 
       <div id='top-header-div'>
-        <div>CoverLetter.io</div>
+        <div id='logo-text'>CoverLetter.io</div>
         <div id='top-header-buttons-div'>
         {/* Turn these buttons into a react component later */}
           <button>Export</button>
