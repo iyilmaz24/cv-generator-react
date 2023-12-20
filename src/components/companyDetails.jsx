@@ -1,14 +1,29 @@
 
 
-export default function CompanyDetails({  styleClasses, children }) {
-    return (
-        <>
-            <div className={styleClasses}>
-                <div className="form-title">
+export default function CompanyDetails({  styleClasses, children, shown }) {
+    
+    if(shown){
+        return (
+            <>
+                <div className={styleClasses}>
                     Employer Details
-                    { children }
+                    <div className="form-title">
+                        { children }
+                    </div>
                 </div>
-            </div>
-        </>
-    )
+            </>
+        )
+    }
+    else{
+        return (
+            <>
+                <div className={styleClasses}>
+                    <div className="form-title">
+                        Employer Details
+                        { children }
+                    </div>
+                </div>
+            </>
+        )
+    }
 }

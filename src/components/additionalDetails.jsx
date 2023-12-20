@@ -1,14 +1,30 @@
 
 
-export default function AdditionalDetails({  styleClasses, children }) {
-    return (
-        <>  
-            <div className={styleClasses}>
-                <div className="form-title">
+export default function AdditionalDetails({  styleClasses, children, shown }) {
+    
+    if(shown){
+        return (
+            <>  
+                <div className={styleClasses}>
                     Optional Details
-                    { children }
+                    <div className="form-title">
+
+                        { children }
+                    </div>
                 </div>
-            </div>
-        </>
-    )
+            </>
+        )
+    }
+    else{
+        return (
+            <>  
+                <div className={styleClasses}>
+                    <div className="form-title">
+                        Optional Details
+                        { children }
+                    </div>
+                </div>
+            </>
+        )
+    }
 }

@@ -3,11 +3,10 @@
 export default function PersonalDetails({  styleClasses, children, shown }) {
 
     if (shown) {
-        // display the full form + title and button shrunken
         return (
             <>
                 <div className={styleClasses}>
-                    Personal Details
+                    {/* Personal Details */}
                     <form>
                         <input placeholder="First Name"></input>
                         <input placeholder="Last Name"></input>

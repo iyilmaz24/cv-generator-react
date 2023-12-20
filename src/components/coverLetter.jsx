@@ -1,14 +1,29 @@
 
 
-export default function CoverLetter({  styleClasses, children }) {
-    return (
-        <>
-            <div className={styleClasses}>
-                <div className="form-title">
+export default function CoverLetter({  styleClasses, children, shown }) {
+    
+    if(shown){
+        return (
+            <>
+                <div className={styleClasses}>
                     Letter Body
-                    { children }
+                    <div className="form-title">
+                        { children }
+                    </div>
                 </div>
-            </div>
-        </>
-    )
+            </>
+        )
+    }
+    else{
+        return (
+            <>
+                <div className={styleClasses}>
+                    <div className="form-title">
+                        Letter Body
+                        { children }
+                    </div>
+                </div>
+            </>
+        )
+    }
 }
