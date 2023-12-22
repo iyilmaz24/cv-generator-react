@@ -13,6 +13,13 @@ function App() {
 
   const [openForm, setOpenForm] = useState(1);
 
+  const [firstName, setFirstName] = useState("John");
+  const [lastName, setLastName] = useState("Smith");
+  const [phoneNum, setPhoneNum] = useState("123-456-7890");
+  const [email, setEmail] = useState("johnsmith@gmail.com");
+  const [location, setLocation] = useState("Atlanta, Georgia");
+  const [currTitle, setCurrTitle] = useState("Start-Up Intern");
+
   const rightPreviewStyles = "component-preview component-base";
   const leftInputStyles = "component-form component-base";
 
@@ -33,7 +40,8 @@ function App() {
 
       <div id='parent-wrapper'>
         <div id='left-form'>
-          <PersonalDetails styleClasses={leftInputStyles} children={<ExpandButton shown={openForm === 1} 
+          <PersonalDetails styleClasses={leftInputStyles} functions={ {setFirstName, setLastName, setPhoneNum, setEmail, setLocation, setCurrTitle} }
+          children={<ExpandButton shown={openForm === 1} 
           click={() => {if(openForm !== 1){setOpenForm(1)}
               else{setOpenForm(0)} }} />} 
           shown={openForm === 1} />
@@ -54,7 +62,7 @@ function App() {
           shown={openForm === 4} />
         </div>
         <div id='right-preview'>
-          <PreviewLetter styleClasses={rightPreviewStyles} />
+          <PreviewLetter styleClasses={rightPreviewStyles} values={ {firstName, lastName, phoneNum, email, location, currTitle} }/>
         </div>
       </div>
 
@@ -64,3 +72,13 @@ function App() {
 }
 
 export default App
+
+
+// TO DO:
+  // if form input filled out, make form default value that (state == "" ? form.value = null : form.value = currentState)
+    // this way we still get the guiding placeholder text on empty inputs
+
+  // use ternary operator ? to determine wheter form input is empty or filled
+      //  if empty dont display in preview DOM to conserve space and layout
+  
+  // make currently typed text glow green in the preview

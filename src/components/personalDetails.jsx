@@ -1,18 +1,18 @@
 
 
-export default function PersonalDetails({  styleClasses, children, shown }) {
+export default function PersonalDetails({  styleClasses, children, shown, functions }) {
 
     if (shown) {
         return (
             <>
                 <div id="personal-details-form" className={styleClasses + " component-form-shown"}>
                     <form>
-                        <input placeholder="First Name"></input>
-                        <input placeholder="Last Name"></input>
-                        <input placeholder="Phone #"></input>
-                        <input placeholder="Email"></input>
-                        <input placeholder="City, State"></input>
-                        <input placeholder="Current Title"></input>
+                        <input placeholder="First Name" onChange={(event) => functions.setFirstName(event.target.value)}></input>
+                        <input placeholder="Last Name" onChange={(event) => functions.setLastName(event.target.value)}></input>
+                        <input placeholder="Phone #" onChange={(event) => functions.setPhoneNum(event.target.value)}></input>
+                        <input placeholder ="Email" onChange={(event) => functions.setEmail(event.target.value)}></input>
+                        <input placeholder="City, State" onChange={(event) => functions.setLocation(event.target.value)}></input>
+                        <input placeholder="Current Title" onChange={(event) => functions.setCurrTitle(event.target.value)}></input>
                     </form>
                     <div className="form-title">
                         { children }

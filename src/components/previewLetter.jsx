@@ -1,16 +1,16 @@
 
 
-export default function PreviewLetter({ string, styleClasses }) {
+export default function PreviewLetter({ styleClasses, values }) {
     return (
         <>
             <div className={styleClasses}>        
                 <div style={{width:"100%", display:"flex", justifyContent:"space-between", alignItems:"center", textAlign:"left"}}>
                     <div>
-                        <div>Michael Smith</div>
-                        <div>123-456-7890</div>
-                        <div>covletter.io@outlook.com</div>
-                        <div>Atlanta, Georgia</div>
-                        <div>Startup Intern</div>
+                        <div>{values.firstName} {values.lastName}</div>
+                        <div>{values.phoneNum}</div>
+                        <div>{values.email}</div>
+                        <div>{values.location}</div>
+                        <div>{values.currTitle}</div>
                     </div>
 
                     <div style={{display:"flex", justifyContent:"center", alignItems:"center", gap:"3px"}}>
@@ -23,9 +23,8 @@ export default function PreviewLetter({ string, styleClasses }) {
                 </div>
 
 
-            <div style={{backgroundColor:"gray", width:"100%", fontWeight:"bold"}}>
-                <div>Google</div>    
-                <div>Student Researcher</div>            
+            <div style={{backgroundColor:"forestgreen", color:"white", width:"100%", fontWeight:"bold"}}>
+                <div>Google - Student Researcher</div>      
             </div>
 
             <div style={{width:"100%", height:"100%", flexDirection:"column", display:"flex", justifyContent:"space-between", textAlign:"left"}}>
