@@ -115,9 +115,23 @@
     width: fit-content;
     gap: 5px;
   }
+
   > form input, form textarea {
     font-size: min(inherit, 1rem);
+    font-weight: bold;
+    outline: none;
   }
+
+  > form input:focus, form textarea:focus {
+    color: rgb(11, 172, 73);
+    border: solid rgb(11, 172, 73);  
+  }
+
+  > form input:focus::placeholder, form textarea:focus::placeholder {
+    /* make placeholder text disappear upon focus on input box */
+    color: transparent;
+  }
+
 }
 
 #personal-details-form{
