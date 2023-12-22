@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   
-  min-height: 850px;
+  min-height: 950px;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   --local-height: max(90vh, 600px);
@@ -26,14 +26,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1rem;
-  width: 85%;
+  margin: 1rem 0rem 0.8rem 0rem;
+  width: 100%;
 }
 
 #logo-text{
   font-size: max(1rem, calc(0.037 * var(--local-height)));
-  font-weight: bolder;
-  letter-spacing: 1.5px;
+  font-weight: 900;
+  letter-spacing: 0.75px;
 }
 
 #top-header-buttons-div{
@@ -46,12 +46,17 @@
     border-radius: 0.8rem;
     padding: 0.3rem 0.6rem;
     font-weight: bold;
-    background-color: rgb(30, 219, 103);
+
+    /*  lighter green button  
+    background-color: rgb(7, 199, 81); */
+
+    background-color: rgb(11, 172, 73);
     color: #FFFFFF;
   }
   > button:hover{
     transform: scale(1.05);
-    background-color: rgb(11, 182, 77);
+    /* background-color: rgb(11, 182, 77); */
+    background-color: rgb(7, 199, 81);
   }
 }
 
@@ -92,7 +97,12 @@
   border: 1px solid #000000;
   border-radius: 1rem;
   font-size: calc(0.037 * var(--local-height));
-  height: fit-content;
+  letter-spacing: -0.6px;
+  font-weight: 550;
+}
+
+.component-form-closed{
+  width: min(20vw);
 }
 
 .component-form-shown{
@@ -110,8 +120,9 @@
   }
 }
 
-.component-form-closed{
-  width: min(20vw);
+#personal-details-form{
+  height: max(100px);
+  overflow-y: scroll;
 }
 
 .component-preview{
@@ -139,6 +150,10 @@
 
 
 @media only screen and (max-width: 700px) {
+
+  #top-header-div{
+    justify-content: space-evenly;
+  }
 
   #parent-wrapper{
     display: flex;

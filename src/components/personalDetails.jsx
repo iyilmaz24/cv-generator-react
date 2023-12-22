@@ -5,7 +5,7 @@ export default function PersonalDetails({  styleClasses, children, shown }) {
     if (shown) {
         return (
             <>
-                <div className={styleClasses + " component-form-shown"}>
+                <div id="personal-details-form" className={styleClasses + " component-form-shown"}>
                     <form>
                         <input placeholder="First Name"></input>
                         <input placeholder="Last Name"></input>
