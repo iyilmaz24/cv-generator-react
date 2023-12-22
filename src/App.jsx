@@ -20,7 +20,7 @@ function App() {
 
       <div id='top-header-div'>
         <div id='logo-text'>
-          <span style={ {color:"rgb(30, 219, 103)"} }>Cover</span><span style={ {color:"rgb(255, 255, 255)"} }>Letter.io</span>
+          <span style={ {color:"rgb(30, 219, 103)"} }>Cov</span><span style={ {color:"rgb(255, 255, 255)"} }>Letter.io</span>
         </div>
         <div id='top-header-buttons-div'>
         {/* Turn these buttons into a react component later */}
