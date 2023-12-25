@@ -7,7 +7,13 @@ export default function PersonalDetails({  styleClasses, children, shown, functi
             <>
                 <div id="personal-details-form" className={styleClasses + " component-form-shown"}>
                     <form>
-                        <input placeholder="First Name" onChange={(event) => functions.setFirstName(event.target.value)}></input>
+                        <input placeholder="First Name" onFocus={   (event.target.value == "") ? 
+                        // right now if the user focuses on the default input, it will disappear which is good
+                            // but on the false for the ternary operator (?) we should return false, null or 
+                            // something similar rather than invalidly calling the useState setter, it makes the app crash
+                            functions.setFirstName("") : functions.setFirstName
+                        } 
+                        onChange={(event) => functions.setFirstName(event.target.value)}></input>
                         <input placeholder="Last Name" onChange={(event) => functions.setLastName(event.target.value)}></input>
                         <input placeholder="Phone #" onChange={(event) => functions.setPhoneNum(event.target.value)}></input>
                         <input placeholder ="Email" onChange={(event) => functions.setEmail(event.target.value)}></input>
