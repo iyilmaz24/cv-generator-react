@@ -1,6 +1,7 @@
 
 
 export default function PreviewLetter({ styleClasses, values }) {
+
     return (
         <>
             <div className={styleClasses}>        
@@ -10,7 +11,7 @@ export default function PreviewLetter({ styleClasses, values }) {
                         <div>{values.phoneNum}</div>
                         <div>{values.email}</div>
                         <div>{values.location}</div>
-                        <div>{values.currTitle}</div>
+                        <div id="currTitle">{values.currTitle}</div>
                     </div>
 
                     <div style={{display:"flex", justifyContent:"center", alignItems:"center", gap:"3px"}}>

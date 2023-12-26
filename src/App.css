@@ -243,3 +243,14 @@
   }
 }
 
+/* animation and css class wrapper used to implement green animated glow when text gains focus  */
+.textColorAnim {
+  animation: color-change 4s infinite ease-in-out; 
+}
+
+@keyframes color-change {
+  0% { color: rgb(0, 0, 0); }
+  10% { color: rgb(7, 199, 81); }
+  65% { color: rgb(11, 172, 73); }
+  100% { color: rgb(0, 0, 0); }
+}
