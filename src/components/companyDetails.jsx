@@ -1,6 +1,6 @@
 
 
-export default function CompanyDetails({  styleClasses, children, shown }) {
+export default function CompanyDetails({  styleClasses, children, shown, functions }) {
     
     if(shown){
         return (

@@ -51,7 +51,8 @@ function App() {
               else{setOpenForm(0)} }} />} 
           shown={openForm === 2} />
 
-          <CompanyDetails styleClasses={leftInputStyles} children={<ExpandButton shown={openForm === 3} 
+          <CompanyDetails styleClasses={leftInputStyles} functions={ {} }
+          children={<ExpandButton shown={openForm === 3} 
           click={() => {if(openForm !== 3){setOpenForm(3)}
               else{setOpenForm(0)} }} />} 
           shown={openForm === 3} />
