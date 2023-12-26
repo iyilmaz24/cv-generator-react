@@ -11,7 +11,7 @@ import ExpandButton from './components/expandButton'
 
 function App() {
 
-  const [openForm, setOpenForm] = useState(1);
+  const [openForm, setOpenForm] = useState(0);
 
   const [firstName, setFirstName] = useState("John");
   const [lastName, setLastName] = useState("Smith");
@@ -19,6 +19,10 @@ function App() {
   const [email, setEmail] = useState("johnsmith@gmail.com");
   const [location, setLocation] = useState("Atlanta, Georgia");
   const [currTitle, setCurrTitle] = useState("Start-Up Intern");
+
+  const [company, setCompanyName] = useState("Microsoft");
+  const [jobTitle, setJobTitle] = useState("Software Engineer II");
+
 
   const rightPreviewStyles = "component-preview component-base";
   const leftInputStyles = "component-form component-base";
@@ -51,7 +55,7 @@ function App() {
               else{setOpenForm(0)} }} />} 
           shown={openForm === 2} />
 
-          <CompanyDetails styleClasses={leftInputStyles} functions={ {} }
+          <CompanyDetails styleClasses={leftInputStyles} functions={ {setCompanyName, setJobTitle} }
           children={<ExpandButton shown={openForm === 3} 
           click={() => {if(openForm !== 3){setOpenForm(3)}
               else{setOpenForm(0)} }} />} 
@@ -63,7 +67,7 @@ function App() {
           shown={openForm === 4} />
         </div>
         <div id='right-preview'>
-          <PreviewLetter styleClasses={rightPreviewStyles} values={ {firstName, lastName, phoneNum, email, location, currTitle} }/>
+          <PreviewLetter styleClasses={rightPreviewStyles} values={ {firstName, lastName, phoneNum, email, location, currTitle, company, jobTitle} }/>
         </div>
       </div>
 
@@ -75,11 +79,3 @@ function App() {
 export default App
 
 
-// TO DO:
-  // if form input filled out, make form default value that (state == "" ? form.value = null : form.value = currentState)
-    // this way we still get the guiding placeholder text on empty inputs
-
-  // use ternary operator ? to determine wheter form input is empty or filled
-      //  if empty dont display in preview DOM to conserve space and layout
-  
-  // make currently typed text glow green in the preview

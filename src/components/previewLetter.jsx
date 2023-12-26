@@ -29,8 +29,8 @@ export default function PreviewLetter({ styleClasses, values }) {
 
             <div style={{backgroundColor:"forestgreen", color:"white", width:"100%", fontWeight:"bold"}}>
                 <div>
-                    <span>Google </span> 
-                    <span>Student Researcher</span>
+                    <span id="companyName">{values.company} </span> 
+                    <span id="jobTitle">{values.jobTitle}</span>
                 </div>      
             </div>
 
