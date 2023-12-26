@@ -23,6 +23,10 @@ function App() {
   const [company, setCompanyName] = useState("Microsoft");
   const [jobTitle, setJobTitle] = useState("Software Engineer II");
 
+  const [greeting, setGreeting] = useState("Dear Hiring Manager");
+  const [outro, setOutro] = useState("Best Regards");
+  const [letterBody, setLetterBody] = useState("Copy + Paste your letter body here!");
+
 
   const rightPreviewStyles = "component-preview component-base";
   const leftInputStyles = "component-form component-base";
@@ -61,13 +65,15 @@ function App() {
               else{setOpenForm(0)} }} />} 
           shown={openForm === 3} />
 
-          <CoverLetter styleClasses={leftInputStyles} children={<ExpandButton shown={openForm === 4} 
+          <CoverLetter styleClasses={leftInputStyles} functions={ {setGreeting, setOutro, setLetterBody} }
+          children={<ExpandButton shown={openForm === 4} 
           click={() => {if(openForm !== 4){setOpenForm(4)}
               else{setOpenForm(0)} }} />} 
           shown={openForm === 4} />
         </div>
         <div id='right-preview'>
-          <PreviewLetter styleClasses={rightPreviewStyles} values={ {firstName, lastName, phoneNum, email, location, currTitle, company, jobTitle} }/>
+          <PreviewLetter styleClasses={rightPreviewStyles} values={ {firstName, lastName, phoneNum, email, location, currTitle, company, jobTitle,
+          greeting, outro, letterBody} }/>
         </div>
       </div>
 

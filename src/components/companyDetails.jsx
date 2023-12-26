@@ -1,11 +1,12 @@
 
 
 export default function CompanyDetails({  styleClasses, children, shown, functions:{ setCompanyName, setJobTitle } }) {
-
-    const companyNameNode = document.getElementById("companyName");
-    const jobTitleNode = document.getElementById("jobTitle");
     
     if(shown){
+        
+        const companyNameNode = document.getElementById("companyName");
+        const jobTitleNode = document.getElementById("jobTitle");
+
         return (
             <>
                 <div className={styleClasses + " component-form-shown"}>
