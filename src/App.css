@@ -254,3 +254,34 @@
   65% { color: rgb(11, 172, 73); }
   100% { color: rgb(0, 0, 0); }
 }
+
+/* styling for our external icons/links to LinkedIn, GitHub, and third website  */
+#logosDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
+#linkedInLogo{
+  background: url(../src/assets/linkedin-svgrepo-com.svg);
+}
+#gitHubLogo{
+  background: url(../src/assets/github-142-svgrepo-com.svg);
+} 
+#otherLogo{
+  background: url(../src/assets/page-link-svgrepo-com.svg);
+}
+
+#linkedInLogo, #gitHubLogo, #otherLogo{
+  height: 1.5rem;
+  width: 1.5rem;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#linkedInLogo{
+  height: 1.75rem;
+  width: 1.75rem;
+}

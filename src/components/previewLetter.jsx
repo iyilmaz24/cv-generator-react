@@ -17,12 +17,10 @@ export default function PreviewLetter({ styleClasses, values }) {
                         <div id="currTitle">{values.currTitle}</div>
                     </div>
 
-                    <div style={{display:"flex", justifyContent:"center", alignItems:"center", gap:"3px"}}>
-                        <div>| - |</div>
-                        <div>| - |</div>
-                        <div>| - |</div>
-                        <div>| - |</div>
-                        <div>| - |</div>
+                    <div id="logosDiv">
+                        <a href="google.com" id="linkedInLogo"></a>
+                        <a href="google.com" id="gitHubLogo"></a>
+                        <a href="google.com" id="otherLogo"></a>
                     </div>
                 </div>
 
