@@ -7,10 +7,13 @@ export default function PreviewLetter({ styleClasses, values }) {
             <div className={styleClasses}>        
                 <div style={{width:"100%", display:"flex", justifyContent:"space-between", alignItems:"center", textAlign:"left"}}>
                     <div>
-                        <div>{values.firstName} {values.lastName}</div>
-                        <div>{values.phoneNum}</div>
-                        <div>{values.email}</div>
-                        <div>{values.location}</div>
+                        <div>
+                        <span id="firstName">{values.firstName} </span>
+                        <span id="lastName">{values.lastName}</span>
+                        </div>
+                        <div id="phoneNum">{values.phoneNum}</div>
+                        <div id="email">{values.email}</div>
+                        <div id="location">{values.location}</div>
                         <div id="currTitle">{values.currTitle}</div>
                     </div>
 
