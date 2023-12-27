@@ -4,7 +4,7 @@ export default function PreviewLetter({ styleClasses, values }) {
 
     return (
         <>
-            <div className={styleClasses}>        
+            <div id="fullPage" className={styleClasses}>        
                 <div style={{width:"100%", display:"flex", justifyContent:"space-between", alignItems:"center", textAlign:"left"}}>
                     <div>
                         <div>
@@ -26,27 +26,20 @@ export default function PreviewLetter({ styleClasses, values }) {
 
 
             <div>
-                <div style={ { fontWeight:"800" } }>
+                <div style={ { fontWeight:"800", margin:"1rem"} }>
                     <span id="companyName">{values.company} </span> 
                     <span id="jobTitle">{values.jobTitle}</span>
                 </div>      
             </div>
 
-            <div style={{width:"100%", height:"100%", flexDirection:"column", display:"flex", justifyContent:"space-between", textAlign:"left"}}>
+            <div style={{width:"100%", flexDirection:"column", display:"flex", justifyContent:"space-between", textAlign:"left"}}>
                 <div id="greeting">{values.greeting},</div>
                 <div id="letterBody">
+                    <br></br>
                     {values.letterBody}
-                    {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Sed diam nisi, viverra non elit convallis, egestas auctor quam. 
-                    Integer feugiat sit amet ligula non ullamcorper. Suspendisse ac erat dui. 
-                    Ut luctus leo dui, nec facilisis turpis condimentum ac. 
-                    Nullam eget enim lobortis, cursus sem nec, molestie lectus. 
-                    Fusce eu leo ac dolor malesuada cursus. Morbi eget arcu lacus. 
-                    Curabitur in elit eget velit aliquam eleifend id tincidunt lorem. 
-                    Nam vestibulum quis lectus eget pulvinar. 
-                    Mauris dignissim convallis erat, in faucibus lectus eleifend ac. */}
                 </div>
                 <div>
+                    <br></br>
                     <div id="outro">{values.outro},</div>
                     <div>
                         <span id="firstNameOutro">{values.firstName} </span>

@@ -202,9 +202,48 @@
 
 }
 
+/* styling for our external icons/links to LinkedIn, GitHub, and third website  */
+#logosDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 1rem;
+}
+
+#linkedInLogo{
+  background: url(../src/assets/linkedin-icon-svgrepo-com.svg);
+}
+#gitHubLogo{
+  background: url(../src/assets/github-142-svgrepo-com.svg);
+} 
+#otherLogo{
+  background: url(../src/assets/page-link-svgrepo-com.svg);
+}
+
+#linkedInLogo, #gitHubLogo, #otherLogo{
+  height: calc(0.040 * var(--local-height));
+  width: calc(0.040 * var(--local-height));
+  background-size: contain;
+  /* renders as 'display:none' but becomes 'display:flex' when user types link */
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#fullPage{
+  padding: 0.75rem;
+}
+
+
 @media screen and (orientation:portrait) {
   #root{
     --mobile-local-width: 90vw;
+  }
+
+  #linkedInLogo, #gitHubLogo, #otherLogo{
+    height: calc(0.040 * var(--mobile-local-width));
+    width: calc(0.040 * var(--mobile-local-width));
   }
 
   .component-form {
@@ -256,32 +295,4 @@
   100% { color: rgb(0, 0, 0); }
 }
 
-/* styling for our external icons/links to LinkedIn, GitHub, and third website  */
-#logosDiv{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.3rem;
-  margin: 1rem;
-}
-
-#linkedInLogo{
-  background: url(../src/assets/linkedin-icon-svgrepo-com.svg);
-}
-#gitHubLogo{
-  background: url(../src/assets/github-142-svgrepo-com.svg);
-} 
-#otherLogo{
-  background: url(../src/assets/page-link-svgrepo-com.svg);
-}
-
-#linkedInLogo, #gitHubLogo, #otherLogo{
-  height: 1.5rem;
-  width: 1.5rem;
-  background-size: contain;
-  /* renders as 'display:none' but becomes 'display:flex' when user types link */
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
 

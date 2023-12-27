@@ -6,7 +6,7 @@ import CompanyDetails from './components/companyDetails'
 import CoverLetter from './components/coverLetter'
 import PreviewLetter from './components/previewLetter'
 import ExpandButton from './components/expandButton'
-
+import { dummyText } from './assets/dummyText'
 
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
 
   const [greeting, setGreeting] = useState("Dear Hiring Manager");
   const [outro, setOutro] = useState("Best Regards");
-  const [letterBody, setLetterBody] = useState("Copy + Paste your letter body here!");
+  const [letterBody, setLetterBody] = useState(dummyText);
 
   const [linkedIn, setLinkedIn] = useState("");
   const [gitHub, setGitHub] = useState("");
