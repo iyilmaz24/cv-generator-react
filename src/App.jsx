@@ -27,6 +27,10 @@ function App() {
   const [outro, setOutro] = useState("Best Regards");
   const [letterBody, setLetterBody] = useState("Copy + Paste your letter body here!");
 
+  const [linkedIn, setLinkedIn] = useState("");
+  const [gitHub, setGitHub] = useState("");
+  const [otherSite, setOtherSite] = useState(""); 
+
 
   const rightPreviewStyles = "component-preview component-base";
   const leftInputStyles = "component-form component-base";
@@ -54,7 +58,7 @@ function App() {
               else{setOpenForm(0)} }} />} 
           shown={openForm === 1} />
 
-          <AdditionalDetails styleClasses={leftInputStyles} children={<ExpandButton shown={openForm === 2} 
+          <AdditionalDetails styleClasses={leftInputStyles} functions={ {setLinkedIn, setGitHub, setOtherSite} } children={<ExpandButton shown={openForm === 2} 
           click={() => {if(openForm !== 2){setOpenForm(2)}
               else{setOpenForm(0)} }} />} 
           shown={openForm === 2} />
@@ -73,7 +77,7 @@ function App() {
         </div>
         <div id='right-preview'>
           <PreviewLetter styleClasses={rightPreviewStyles} values={ {firstName, lastName, phoneNum, email, location, currTitle, company, jobTitle,
-          greeting, outro, letterBody} }/>
+          greeting, outro, letterBody, linkedIn, gitHub, otherSite} }/>
         </div>
       </div>
 

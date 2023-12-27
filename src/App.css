@@ -162,7 +162,6 @@
   align-items: center;
 }
 
-
 @media only screen and (max-width: 700px) {
 
   #top-header-div{
@@ -243,6 +242,8 @@
   }
 }
 
+
+
 /* animation and css class wrapper used to implement green animated glow when text gains focus  */
 .textColorAnim {
   animation: color-change 4s infinite ease-in-out; 
@@ -277,7 +278,8 @@
   height: 1.5rem;
   width: 1.5rem;
   background-size: contain;
-  display: flex;
+  /* renders as 'display:none' but becomes 'display:flex' when user types link */
+  display: none;
   justify-content: center;
   align-items: center;
 }

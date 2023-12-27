@@ -18,15 +18,15 @@ export default function PreviewLetter({ styleClasses, values }) {
                     </div>
 
                     <div id="logosDiv">
-                        <a href="google.com" id="linkedInLogo"></a>
-                        <a href="google.com" id="gitHubLogo"></a>
-                        <a href="google.com" id="otherLogo"></a>
+                        <a href={values.linkedIn} target="_blank" id="linkedInLogo"></a>
+                        <a href={values.gitHub} target="_blank" id="gitHubLogo"></a>
+                        <a href={values.otherSite} target="_blank" id="otherLogo"></a>
                     </div>
                 </div>
 
 
-            <div style={{backgroundColor:"forestgreen", color:"white", width:"100%", fontWeight:"bold"}}>
-                <div>
+            <div>
+                <div style={ { fontWeight:"800" } }>
                     <span id="companyName">{values.company} </span> 
                     <span id="jobTitle">{values.jobTitle}</span>
                 </div>      
