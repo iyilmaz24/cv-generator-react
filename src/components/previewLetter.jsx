@@ -22,6 +22,13 @@ export default function PreviewLetter({ styleClasses, values }) {
                         <a href={values.gitHub} target="_blank" id="gitHubLogo"></a>
                         <a href={values.otherSite} target="_blank" id="otherLogo"></a>
                     </div>
+
+                    {/* these logos will pop up initially, but disappear as soon as any form component is extended/opened */}
+                    <div id="demoLogosDiv">
+                        <a className="demoLogos" id="demoLogo1"></a>
+                        <a className="demoLogos" id="demoLogo2"></a>
+                        <a className="demoLogos" id="demoLogo3"></a>
+                    </div>
                 </div>
 
 

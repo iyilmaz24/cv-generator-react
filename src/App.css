@@ -203,7 +203,7 @@
 }
 
 /* styling for our external icons/links to LinkedIn, GitHub, and third website  */
-#logosDiv{
+#logosDiv, #demoLogosDiv{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -211,17 +211,17 @@
   margin: 1rem;
 }
 
-#linkedInLogo{
+#linkedInLogo, #demoLogo1{
   background: url(../src/assets/linkedin-icon-svgrepo-com.svg);
 }
-#gitHubLogo{
+#gitHubLogo, #demoLogo2{
   background: url(../src/assets/github-142-svgrepo-com.svg);
 } 
-#otherLogo{
+#otherLogo, #demoLogo3{
   background: url(../src/assets/page-link-svgrepo-com.svg);
 }
 
-#linkedInLogo, #gitHubLogo, #otherLogo{
+#linkedInLogo, #gitHubLogo, #otherLogo, #demoLogo1, #demoLogo2, #demoLogo3{
   height: calc(0.040 * var(--local-height));
   width: calc(0.040 * var(--local-height));
   background-size: contain;
@@ -229,6 +229,10 @@
   display: none;
   justify-content: center;
   align-items: center;
+}
+
+#demoLogo1, #demoLogo2, #demoLogo3{
+  display: flex;
 }
 
 #fullPage{
@@ -241,7 +245,7 @@
     --mobile-local-width: 90vw;
   }
 
-  #linkedInLogo, #gitHubLogo, #otherLogo{
+  #linkedInLogo, #gitHubLogo, #otherLogo, #demoLogo1, #demoLogo2, #demoLogo3{
     height: calc(0.040 * var(--mobile-local-width));
     width: calc(0.040 * var(--mobile-local-width));
   }

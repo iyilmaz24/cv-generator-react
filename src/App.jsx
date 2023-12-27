@@ -6,7 +6,7 @@ import CompanyDetails from './components/companyDetails'
 import CoverLetter from './components/coverLetter'
 import PreviewLetter from './components/previewLetter'
 import ExpandButton from './components/expandButton'
-import { dummyText } from './assets/dummyText'
+import dummyText from './assets/dummyText'
 
 
 function App() {
@@ -34,6 +34,15 @@ function App() {
 
   const rightPreviewStyles = "component-preview component-base";
   const leftInputStyles = "component-form component-base";
+
+
+  // as soon as the user opens any form component, make the demoLogosDiv disappear from display
+  const demoLogosDiv = document.getElementById("demoLogosDiv");
+  if(openForm != 0){
+    demoLogosDiv.style.display = "none";
+    demoLogosDiv.style.backgroundColor = "red";
+  }
+
 
   return (
     <>
