@@ -261,11 +261,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3px;
+  gap: 0.3rem;
+  margin: 1rem;
 }
 
 #linkedInLogo{
-  background: url(../src/assets/linkedin-svgrepo-com.svg);
+  background: url(../src/assets/linkedin-icon-svgrepo-com.svg);
 }
 #gitHubLogo{
   background: url(../src/assets/github-142-svgrepo-com.svg);
@@ -283,7 +284,4 @@
   justify-content: center;
   align-items: center;
 }
-#linkedInLogo{
-  height: 1.75rem;
-  width: 1.75rem;
-}
+
