@@ -7,6 +7,8 @@ import CoverLetter from './components/coverLetter'
 import PreviewLetter from './components/previewLetter'
 import ExpandButton from './components/expandButton'
 import dummyText from './assets/dummyText'
+import printDiv from './scripts/printDiv'
+
 
 
 function App() {
@@ -20,7 +22,7 @@ function App() {
   const [location, setLocation] = useState("Atlanta, Georgia");
   const [currTitle, setCurrTitle] = useState("Start-Up Intern");
 
-  const [company, setCompanyName] = useState("Microsoft");
+  const [company, setCompanyName] = useState("Microsoft - ");
   const [jobTitle, setJobTitle] = useState("Software Engineer II");
 
   const [greeting, setGreeting] = useState("Dear Hiring Manager");
@@ -43,7 +45,6 @@ function App() {
     demoLogosDiv.style.backgroundColor = "red";
   }
 
-
   return (
     <>
     <div id='content-wrapper'>
@@ -54,7 +55,7 @@ function App() {
         </div>
         <div id='top-header-buttons-div'>
         {/* Turn these buttons into a react component later */}
-          <button>Export</button>
+          <button onClick={() => printDiv("fullPage")}>Export</button>
           <button>Customize</button>
         </div>
       </div>
@@ -84,9 +85,13 @@ function App() {
               else{setOpenForm(0)} }} />} 
           shown={openForm === 4} />
         </div>
-        <div id='right-preview'>
+        <div id='right-preview' className='printClass'>
+
+          {/* <div id='printDiv' > */}
           <PreviewLetter styleClasses={rightPreviewStyles} values={ {firstName, lastName, phoneNum, email, location, currTitle, company, jobTitle,
           greeting, outro, letterBody, linkedIn, gitHub, otherSite} }/>
+          {/* </div> */}
+
         </div>
       </div>
 

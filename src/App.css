@@ -11,6 +11,7 @@
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   --local-height: max(90vh, 600px);
+  background-color: rgb(32, 46, 66);
 }
 
 #content-wrapper{
@@ -297,6 +298,16 @@
   10% { color: rgb(7, 199, 81); }
   65% { color: rgb(11, 172, 73); }
   100% { color: rgb(0, 0, 0); }
+}
+
+/* apply style rules for formatting the printed document when transferring to print mode */
+@page {
+  size: auto;
+  /* margin: 0; */
+  margin: 16px;
+  background-color: white;
+
+
 }
 
 
