@@ -1,3 +1,3 @@
 Live Demo Preview
 
-https://cv-generator-react-qoihj2zjn-iyilmaz24s-projects.vercel.app/
+https://cv-generator-react.vercel.app/
