@@ -11,16 +11,22 @@ export default function PreviewLetter({ styleClasses, values }) {
                             <span id="firstName">{values.firstName} </span>
                             <span id="lastName">{values.lastName}</span>
                         </div>
-                        <div id="phoneNum">{values.phoneNum}</div>
-                        <div id="email">{values.email}</div>
-                        <div id="location">{values.location}</div>
-                        <div id="currTitle">{values.currTitle}</div>
+                            <div id="phoneNum">{values.phoneNum}</div>
+                            <div id="email">{values.email}</div>
+                            <div id="location">{values.location}</div>
+                            <div id="currTitle">{values.currTitle}</div>
                     </div>
 
                     <div id="logosDiv">
-                        <a href={values.linkedIn} target="_blank" id="linkedInLogo"></a>
-                        <a href={values.gitHub} target="_blank" id="gitHubLogo"></a>
-                        <a href={values.otherSite} target="_blank" id="otherLogo"></a>
+                        <a href={values.linkedIn} target="_blank" id="linkedInLogo">
+                            <img id="linkedInImg" src="../src/assets/linkedin-icon-svgrepo-com.svg" alt="" />
+                        </a>
+                        <a href={values.gitHub} target="_blank" id="gitHubLogo">
+                            <img id="gitHubImg" src="../src/assets/github-142-svgrepo-com.svg" alt="" />
+                        </a>
+                        <a href={values.otherSite} target="_blank" id="otherLogo">
+                            <img id="otherImg" src="../src/assets/page-link-svgrepo-com.svg" alt="" />
+                        </a>
                     </div>
 
                     {/* these logos will pop up initially, but disappear as soon as any form component is extended/opened */}

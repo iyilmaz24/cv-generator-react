@@ -4,9 +4,9 @@ export default function AdditionalDetails({ styleClasses, children, shown, funct
     
     if(shown){
 
-        const linkedInNode = document.getElementById("linkedInLogo");
-        const gitHubNode = document.getElementById("gitHubLogo");
-        const otherSiteNode = document.getElementById("otherLogo");
+        const linkedInNode = document.getElementById("linkedInImg");
+        const gitHubNode = document.getElementById("gitHubImg");
+        const otherSiteNode = document.getElementById("otherImg");
 
         return (
             <>  

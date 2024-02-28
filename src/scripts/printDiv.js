@@ -4,6 +4,10 @@ import $ from 'jquery';
 
 function printDiv(tagid) {
 
+    $("#linkedInImg").addClass("printImg")
+    $("#gitHubImg").addClass("printImg")
+    $("#otherImg").addClass("printImg")
+
     // change root bg color from dark blue to white, when creating new document
     $("#root").css("background-color", "white")
     
@@ -25,6 +29,10 @@ function printDiv(tagid) {
 
     // reset root color to dark blue from white, after writing to new document
     $("#root").css("background-color", "rgb(32, 46, 66)")
+
+    $("#linkedInImg").removeClass("printImg")
+    $("#gitHubImg").removeClass("printImg")
+    $("#otherImg").removeClass("printImg")
 }
 
 

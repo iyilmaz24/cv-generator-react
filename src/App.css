@@ -96,10 +96,12 @@
 .component-form{
   padding: 0.9rem;
   border: 1px solid #000000;
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
   font-size: calc(0.037 * var(--local-height));
   letter-spacing: -0.6px;
   font-weight: 550;
+
+  border-radius: 0.5rem;
 }
 
 .component-form-closed{
@@ -212,6 +214,7 @@
   margin: 1rem;
 }
 
+/* 
 #linkedInLogo, #demoLogo1{
   background: url(../src/assets/linkedin-icon-svgrepo-com.svg);
 }
@@ -220,9 +223,28 @@
 } 
 #otherLogo, #demoLogo3{
   background: url(../src/assets/page-link-svgrepo-com.svg);
+} */
+
+#demoLogo1{
+  background: url(../src/assets/linkedin-icon-svgrepo-com.svg);
+}
+#demoLogo2{
+  background: url(../src/assets/github-142-svgrepo-com.svg);
+} 
+#demoLogo3{
+  background: url(../src/assets/page-link-svgrepo-com.svg);
 }
 
-#linkedInLogo, #gitHubLogo, #otherLogo, #demoLogo1, #demoLogo2, #demoLogo3{
+/* #linkedInLogo, #gitHubLogo, #otherLogo, #demoLogo1, #demoLogo2, #demoLogo3{
+  height: calc(0.040 * var(--local-height));
+  width: calc(0.040 * var(--local-height));
+  background-size: contain;
+  display: none;
+  justify-content: center;
+  align-items: center;
+} */
+
+#linkedInImg, #gitHubImg, #otherImg, #demoLogo1, #demoLogo2, #demoLogo3{
   height: calc(0.040 * var(--local-height));
   width: calc(0.040 * var(--local-height));
   background-size: contain;
@@ -235,7 +257,6 @@
 #demoLogo1, #demoLogo2, #demoLogo3{
   display: flex;
 }
-
 #fullPage{
   padding: 0.75rem;
 }
@@ -307,7 +328,9 @@
   margin: 16px;
   background-color: white;
 
-
 }
 
-
+.printImg {
+  height: 40px !important;
+  width: 40px !important;
+}

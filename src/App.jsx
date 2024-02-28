@@ -85,13 +85,10 @@ function App() {
               else{setOpenForm(0)} }} />} 
           shown={openForm === 4} />
         </div>
+        
         <div id='right-preview' className='printClass'>
-
-          {/* <div id='printDiv' > */}
           <PreviewLetter styleClasses={rightPreviewStyles} values={ {firstName, lastName, phoneNum, email, location, currTitle, company, jobTitle,
           greeting, outro, letterBody, linkedIn, gitHub, otherSite} }/>
-          {/* </div> */}
-
         </div>
       </div>
 
