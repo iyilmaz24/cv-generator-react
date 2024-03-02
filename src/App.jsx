@@ -8,10 +8,12 @@ import PreviewLetter from './components/previewLetter'
 import ExpandButton from './components/expandButton'
 import dummyText from './assets/dummyText'
 import printDiv from './scripts/printDiv'
-
+import HomePage from './pages/homePage'
 
 
 function App() {
+
+  const [homePage, setHomePage] = useState(true);
 
   const [openForm, setOpenForm] = useState(0);
 
@@ -33,7 +35,6 @@ function App() {
   const [gitHub, setGitHub] = useState("");
   const [otherSite, setOtherSite] = useState(""); 
 
-
   const rightPreviewStyles = "component-preview component-base";
   const leftInputStyles = "component-form component-base";
 
@@ -46,6 +47,9 @@ function App() {
   }
 
   return (
+    (homePage == true) ?
+      <HomePage setHomePage={setHomePage} />
+    :
     <>
     <div id='content-wrapper'>
 
