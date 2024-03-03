@@ -13,8 +13,6 @@ import HomePage from './pages/homePage'
 
 function App() {
 
-  const [homePage, setHomePage] = useState(true);
-
   const [openForm, setOpenForm] = useState(0);
 
   const [firstName, setFirstName] = useState("John");
@@ -35,6 +33,11 @@ function App() {
   const [gitHub, setGitHub] = useState("");
   const [otherSite, setOtherSite] = useState(""); 
 
+  const [home, setHome] = useState(false);
+  if (home === true) {
+    return <Navigate to="/" />;
+  };
+
   const rightPreviewStyles = "component-preview component-base";
   const leftInputStyles = "component-form component-base";
 
@@ -47,9 +50,6 @@ function App() {
   }
 
   return (
-    (homePage == true) ?
-      <HomePage setHomePage={setHomePage} />
-    :
     <>
     <div id='content-wrapper'>
 
