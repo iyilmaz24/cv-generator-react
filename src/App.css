@@ -11,7 +11,7 @@
   
 /* min-height: 950px;
   min-height: fit-content; */
-
+  overflow-x: scroll;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   --local-height: max(90vh, 600px);
@@ -28,7 +28,6 @@
 
   min-height: 900px;
   overflow-y: scroll;
-  overflow-x: scroll;
   justify-content: flex-end;
 }
 
@@ -274,6 +273,10 @@
 @media screen and (orientation:portrait) {
   #root{
     --mobile-local-width: 90vw;
+  }
+
+  #content-wrapper {
+    justify-content: center;
   }
 
   #linkedInImg, #gitHubImg, #otherImg, #demoLogo1, #demoLogo2, #demoLogo3{
