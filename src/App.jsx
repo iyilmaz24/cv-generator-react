@@ -8,7 +8,6 @@ import PreviewLetter from './components/previewLetter'
 import ExpandButton from './components/expandButton'
 import dummyText from './assets/dummyText'
 import printDiv from './scripts/printDiv'
-import HomePage from './pages/homePage'
 
 
 function App() {
