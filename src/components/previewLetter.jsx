@@ -19,13 +19,13 @@ export default function PreviewLetter({ styleClasses, values }) {
 
                     <div id="logosDiv">
                         <a href={values.linkedIn} target="_blank" id="linkedInLogo">
-                            <img id="linkedInImg" src="../src/assets/linkedin-icon-svgrepo-com.svg" alt="linkedin" />
+                            <img id="linkedInImg" src="/linkedin-icon-svgrepo-com.svg" alt="linkedin" />
                         </a>
                         <a href={values.gitHub} target="_blank" id="gitHubLogo">
-                            <img id="gitHubImg" src="../src/assets/github-142-svgrepo-com.svg" alt="github" />
+                            <img id="gitHubImg" src="/github-142-svgrepo-com.svg" alt="github" />
                         </a>
                         <a href={values.otherSite} target="_blank" id="otherLogo">
-                            <img id="otherImg" src="../src/assets/page-link-svgrepo-com.svg" alt="portfolio" />
+                            <img id="otherImg" src="/page-link-svgrepo-com.svg" alt="portfolio" />
                         </a>
                     </div>
 

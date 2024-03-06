@@ -234,13 +234,13 @@
 } */
 
 #demoLogo1{
-  background: url(../src/assets/linkedin-icon-svgrepo-com.svg);
+  background: url(/linkedin-icon-svgrepo-com.svg);
 }
 #demoLogo2{
-  background: url(../src/assets/github-142-svgrepo-com.svg);
+  background: url(/github-142-svgrepo-com.svg);
 } 
 #demoLogo3{
-  background: url(../src/assets/page-link-svgrepo-com.svg);
+  background: url(/page-link-svgrepo-com.svg);
 }
 
 /* #linkedInLogo, #gitHubLogo, #otherLogo, #demoLogo1, #demoLogo2, #demoLogo3{
