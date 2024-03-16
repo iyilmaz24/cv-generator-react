@@ -59,7 +59,7 @@ function App() {
         <div id='top-header-buttons-div'>
         {/* Turn these buttons into a react component later */}
           <button onClick={() => printDiv("fullPage")}>Export</button>
-          <button>Customize</button>
+          <button onClick={() => window.location.reload()}>Restart</button>
         </div>
       </div>
 
